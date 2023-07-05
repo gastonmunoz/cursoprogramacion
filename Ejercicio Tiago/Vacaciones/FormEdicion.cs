@@ -22,11 +22,6 @@ namespace Vacaciones
             InitializeComponent();
         }
 
-        private void dateTimeDesde_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
             nombre = textBoxNombre.Text;

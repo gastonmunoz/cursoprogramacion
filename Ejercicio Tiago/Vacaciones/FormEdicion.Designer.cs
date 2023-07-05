@@ -87,7 +87,6 @@
             this.dateTimeDesde.Name = "dateTimeDesde";
             this.dateTimeDesde.Size = new System.Drawing.Size(232, 23);
             this.dateTimeDesde.TabIndex = 4;
-            this.dateTimeDesde.ValueChanged += new System.EventHandler(this.dateTimeDesde_ValueChanged);
             // 
             // dateTimeHasta
             // 
