@@ -19,7 +19,7 @@ namespace Vacaciones
         private void buttonModificar_Click(object sender, EventArgs e)
         {
             if (dataGridVacaciones.CurrentCell.RowIndex >= 0 &&
-                dataGridVacaciones.CurrentCell.RowIndex < dataGridVacaciones.Rows.Count)  
+                dataGridVacaciones.CurrentCell.RowIndex < dataGridVacaciones.Rows.Count-1)  
             {
                 mostrarFormEdicion(false);
             }
@@ -28,7 +28,7 @@ namespace Vacaciones
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
             if (dataGridVacaciones.CurrentCell.RowIndex >= 0 &&
-                dataGridVacaciones.CurrentCell.RowIndex < dataGridVacaciones.Rows.Count)
+                dataGridVacaciones.CurrentCell.RowIndex < dataGridVacaciones.Rows.Count - 1)
             {
                 dataGridVacaciones.Rows.RemoveAt(dataGridVacaciones.CurrentRow.Index);
             }
