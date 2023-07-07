@@ -10,6 +10,7 @@
         {
             InitializeComponent();
         }
+
         private void textboxAceptar_Click(object sender, EventArgs e)
         {
             nombre = textboxNombre.Text;
