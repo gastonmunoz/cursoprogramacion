@@ -3,18 +3,11 @@ namespace WinFormsApp1
     public partial class FormPrincipal : Form
     {
         public FormPrincipal()
-
         {
             InitializeComponent();
         }
 
         private int idinterno = 1;
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void AgregarNuevobutton_Click(object sender, EventArgs e)
         {
             mostrarFormEdicion(true);
