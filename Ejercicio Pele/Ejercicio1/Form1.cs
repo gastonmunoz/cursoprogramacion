@@ -4,12 +4,13 @@ namespace Ejercicio1
 {
     public partial class Form1 : Form
     {
+        private int id = 1;
+        
         public Form1()
         {
             InitializeComponent();
         }
 
-        private int id = 1;
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             FormAgregar form = new FormAgregar();
