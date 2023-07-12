@@ -43,10 +43,15 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.BackgroundColor = SystemColors.ActiveCaptionText;
+            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.SunkenVertical;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { columnID, columnNombre, columnDescripcion, columnEmail, columnTelefono });
+            dataGridView1.EditMode = DataGridViewEditMode.EditOnF2;
             dataGridView1.Location = new Point(-8, 104);
+            dataGridView1.Margin = new Padding(3, 3, 0, 3);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(796, 244);
             dataGridView1.TabIndex = 0;
@@ -55,26 +60,31 @@
             // 
             columnID.HeaderText = "ID";
             columnID.Name = "columnID";
+            columnID.ReadOnly = true;
             // 
             // columnNombre
             // 
             columnNombre.HeaderText = "Nombre";
             columnNombre.Name = "columnNombre";
+            columnNombre.ReadOnly = true;
             // 
             // columnDescripcion
             // 
             columnDescripcion.HeaderText = "Descripcion";
             columnDescripcion.Name = "columnDescripcion";
+            columnDescripcion.ReadOnly = true;
             // 
             // columnEmail
             // 
             columnEmail.HeaderText = "Email";
             columnEmail.Name = "columnEmail";
+            columnEmail.ReadOnly = true;
             // 
             // columnTelefono
             // 
             columnTelefono.HeaderText = "Telefono";
             columnTelefono.Name = "columnTelefono";
+            columnTelefono.ReadOnly = true;
             // 
             // btnAgregar
             // 
