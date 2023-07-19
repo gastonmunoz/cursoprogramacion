@@ -56,8 +56,11 @@ namespace ValorantApp
 
         private void ReadUsers()
         {
-            var json = File.ReadAllText($"{Directory.GetCurrentDirectory()}\\data\\users.json");
-            users = JsonSerializer.Deserialize<List<User>>(json);
+            if (Directory.Exists($"{Directory.GetCurrentDirectory()}\\data"))
+            {
+                var json = File.ReadAllText($"{Directory.GetCurrentDirectory()}\\data\\users.json");
+                users = JsonSerializer.Deserialize<List<User>>(json);
+            }
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
