@@ -64,7 +64,6 @@
             this.groupBoxNuevas.TabIndex = 0;
             this.groupBoxNuevas.TabStop = false;
             this.groupBoxNuevas.Text = "Nuevas Vacaciones";
-            this.groupBoxNuevas.UseWaitCursor = true;
             // 
             // buttonAceptar
             // 
@@ -76,7 +75,6 @@
             this.buttonAceptar.TabIndex = 25;
             this.buttonAceptar.Text = "Aceptar";
             this.buttonAceptar.UseVisualStyleBackColor = false;
-            this.buttonAceptar.UseWaitCursor = true;
             this.buttonAceptar.Click += new System.EventHandler(this.buttonAceptar_Click);
             // 
             // textBoxNombre
@@ -85,7 +83,6 @@
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(230, 23);
             this.textBoxNombre.TabIndex = 14;
-            this.textBoxNombre.UseWaitCursor = true;
             // 
             // buttonCancelar
             // 
@@ -97,7 +94,6 @@
             this.buttonCancelar.TabIndex = 24;
             this.buttonCancelar.Text = "Cancelar";
             this.buttonCancelar.UseVisualStyleBackColor = false;
-            this.buttonCancelar.UseWaitCursor = true;
             this.buttonCancelar.Click += new System.EventHandler(this.buttonCancelar_Click);
             // 
             // textBoxDescripcion
@@ -106,7 +102,6 @@
             this.textBoxDescripcion.Name = "textBoxDescripcion";
             this.textBoxDescripcion.Size = new System.Drawing.Size(230, 23);
             this.textBoxDescripcion.TabIndex = 15;
-            this.textBoxDescripcion.UseWaitCursor = true;
             // 
             // labelHasta
             // 
@@ -116,7 +111,6 @@
             this.labelHasta.Size = new System.Drawing.Size(69, 15);
             this.labelHasta.TabIndex = 23;
             this.labelHasta.Text = "Fecha hasta";
-            this.labelHasta.UseWaitCursor = true;
             // 
             // comboBoxEmpleadas
             // 
@@ -130,7 +124,6 @@
             this.comboBoxEmpleadas.Name = "comboBoxEmpleadas";
             this.comboBoxEmpleadas.Size = new System.Drawing.Size(229, 23);
             this.comboBoxEmpleadas.TabIndex = 16;
-            this.comboBoxEmpleadas.UseWaitCursor = true;
             // 
             // labelDesde
             // 
@@ -140,7 +133,6 @@
             this.labelDesde.Size = new System.Drawing.Size(72, 15);
             this.labelDesde.TabIndex = 22;
             this.labelDesde.Text = "Fecha desde";
-            this.labelDesde.UseWaitCursor = true;
             // 
             // dateTimeDesde
             // 
@@ -149,7 +141,6 @@
             this.dateTimeDesde.Name = "dateTimeDesde";
             this.dateTimeDesde.Size = new System.Drawing.Size(232, 23);
             this.dateTimeDesde.TabIndex = 17;
-            this.dateTimeDesde.UseWaitCursor = true;
             // 
             // labelEmpleada
             // 
@@ -159,7 +150,6 @@
             this.labelEmpleada.Size = new System.Drawing.Size(71, 15);
             this.labelEmpleada.TabIndex = 21;
             this.labelEmpleada.Text = "Empleada/o";
-            this.labelEmpleada.UseWaitCursor = true;
             // 
             // dateTimeHasta
             // 
@@ -167,7 +157,6 @@
             this.dateTimeHasta.Name = "dateTimeHasta";
             this.dateTimeHasta.Size = new System.Drawing.Size(232, 23);
             this.dateTimeHasta.TabIndex = 18;
-            this.dateTimeHasta.UseWaitCursor = true;
             // 
             // labelDescripcion
             // 
@@ -177,7 +166,6 @@
             this.labelDescripcion.Size = new System.Drawing.Size(69, 15);
             this.labelDescripcion.TabIndex = 20;
             this.labelDescripcion.Text = "Descripcion";
-            this.labelDescripcion.UseWaitCursor = true;
             // 
             // labelNombre
             // 
@@ -187,7 +175,6 @@
             this.labelNombre.Size = new System.Drawing.Size(51, 15);
             this.labelNombre.TabIndex = 19;
             this.labelNombre.Text = "Nombre";
-            this.labelNombre.UseWaitCursor = true;
             // 
             // FormEdicion
             // 

@@ -96,6 +96,7 @@
             this.dataGridVacaciones.RowTemplate.Height = 25;
             this.dataGridVacaciones.Size = new System.Drawing.Size(573, 264);
             this.dataGridVacaciones.TabIndex = 6;
+            this.dataGridVacaciones.SelectionChanged += new System.EventHandler(this.dataGridVacaciones_SelectionChanged);
             // 
             // ColumnID
             // 

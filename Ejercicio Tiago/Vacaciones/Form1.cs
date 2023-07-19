@@ -1,5 +1,3 @@
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
 namespace Vacaciones
 {
     public partial class Form1 : Form
@@ -74,6 +72,11 @@ namespace Vacaciones
                     dataGridVacaciones.CurrentRow.Cells[5].Value = formEdicion.fechaHasta.ToShortDateString();
                 }
             }
+        }
+
+        private void dataGridVacaciones_SelectionChanged(object sender, EventArgs e)
+        {
+            buttonModificar.Enabled = (dataGridVacaciones.SelectedRows.Count == 1) && (dataGridVacaciones.CurrentRow.Index != dataGridVacaciones.Rows.Count - 1);
         }
     }
 }
