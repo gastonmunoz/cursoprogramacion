@@ -1,6 +1,7 @@
 using System.Text.Json;
 using ValorantApp.App;
 using ValorantApp.Authentication;
+using ValorantApp.Helper;
 using ValorantApp.Model;
 
 namespace ValorantApp
@@ -32,7 +33,7 @@ namespace ValorantApp
             }
             else
             {
-                FormSearch formSearch = new FormSearch();
+                FormSearch formSearch = new FormSearch(users);
                 formSearch.ShowDialog();
             }
         }
@@ -40,18 +41,7 @@ namespace ValorantApp
         private void AddUser(User user)
         {
             users.Add(user);
-            SaveUsersToJson();
-        }
-
-        private void SaveUsersToJson()
-        {
-            if(!Directory.Exists($"{Directory.GetCurrentDirectory()}\\data"))
-            {
-                Directory.CreateDirectory($"{Directory.GetCurrentDirectory()}\\data");
-            }
-
-            var json = JsonSerializer.Serialize(users);
-            File.WriteAllText($"{Directory.GetCurrentDirectory()}\\data\\users.json", json);
+            JsonHelper.SaveUsersToJson(users);
         }
 
         private void ReadUsers()
