@@ -8,12 +8,10 @@ namespace ValorantApp
     public partial class FormPrincipal : Form
     {
         public List<User> users = new List<User>();
-
         public FormPrincipal()
         {
             InitializeComponent();
         }
-
         private void buttonSignUp_Click(object sender, EventArgs e)
         {
             FormSignUp formSignUp = new FormSignUp();
@@ -22,7 +20,6 @@ namespace ValorantApp
                 AddUser(new User(formSignUp.userName, formSignUp.password));
             }
         }
-
         private void buttonLogin_Click(object sender, EventArgs e)
         {
             User user = users.FirstOrDefault(p => p.UserName == textBoxUser.Text && p.Password == textBoxPassword.Text);
@@ -36,13 +33,11 @@ namespace ValorantApp
                 formSearch.ShowDialog();
             }
         }
-
         private void AddUser(User user)
         {
             users.Add(user);
             SaveUsersToJson();
         }
-
         private void SaveUsersToJson()
         {
             if(!Directory.Exists($"{Directory.GetCurrentDirectory()}\\data"))
@@ -53,7 +48,6 @@ namespace ValorantApp
             var json = JsonSerializer.Serialize(users);
             File.WriteAllText($"{Directory.GetCurrentDirectory()}\\data\\users.json", json);
         }
-
         private void ReadUsers()
         {
             if (Directory.Exists($"{Directory.GetCurrentDirectory()}\\data"))
@@ -62,7 +56,6 @@ namespace ValorantApp
                 users = JsonSerializer.Deserialize<List<User>>(json);
             }
         }
-
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             ReadUsers();

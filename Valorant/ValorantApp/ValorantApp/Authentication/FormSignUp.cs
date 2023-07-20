@@ -1,4 +1,6 @@
-﻿namespace ValorantApp.Authentication
+﻿using ValorantApp.App;
+
+namespace ValorantApp.Authentication
 {
     public partial class FormSignUp : Form
     {
@@ -22,6 +24,8 @@
             password = textBoxPassword.Text;
             DialogResult = DialogResult.OK;
             Close();
+            FormSearch formSearch = new FormSearch();
+            formSearch.ShowDialog();
         }
     }
 }
