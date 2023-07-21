@@ -38,8 +38,8 @@ namespace modeloBaseSQL
         // Reemplazamos AWS_RDS_ENDPOINT por el endpoint que corresponda a nuestro servidor.
         // Reemplazamos DATABASE_NAME por el nombre de la base de datos a consultar.
         // Reemplazamos USERNAME por el nombre de usuario con el cual nos vamos a conectar.
-        // Reemplazamos PASSWORD por la contraseña que corresponda al usuario con el cual nos vamos a conectar.
-        private string connectionString = "Data Source=valorant-cursoprogra.clcbypuaglur.us-east-2.rds.amazonaws.com;Initial Catalog=cursoPrograValorant;User ID=admin;Password=valorantCursoProgra;";
+        // Reemplazamos PASSWORD por la contraseÃ±a que corresponda al usuario con el cual nos vamos a conectar.
+        private string connectionString = "";
         private DataTable dataTable = new DataTable();
 
         public SqlExample()
@@ -68,7 +68,7 @@ namespace modeloBaseSQL
                 try
                 {
                     connection.Open();
-                    Console.WriteLine("Conexión exitosa.");
+                    Console.WriteLine("ConexiÃ³n exitosa.");
 
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
