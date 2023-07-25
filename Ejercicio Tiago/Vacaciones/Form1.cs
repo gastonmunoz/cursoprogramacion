@@ -8,7 +8,7 @@ namespace Vacaciones
         private int Id = 1;
         private string carpetaActual = Path.GetDirectoryName(Application.ExecutablePath);
         private string nombreArchivoData;
-        public List<CadaVacacion> lista = new List<CadaVacacion>();
+        public List<Vacacion> lista = new List<Vacacion>();
         public Form1()
         {
             nombreArchivoData = $"{carpetaActual}\\data.json";
@@ -73,18 +73,18 @@ namespace Vacaciones
                 string json = File.ReadAllText(nombreArchivoData);
                 try
                 {
-                    lista = JsonSerializer.Deserialize<List<CadaVacacion>>(json);
+                    lista = JsonSerializer.Deserialize<List<Vacacion>>(json);
 
-                    foreach (var cadavacacion in lista)
+                    foreach (var vacacion in lista)
                     {
-                        dataGridVacaciones.Rows.Add(cadavacacion.id, cadavacacion.nombre, cadavacacion.descripcion, cadavacacion.empleada, cadavacacion.fechaDesde.ToShortDateString(), cadavacacion.fechaHasta.ToShortDateString());
-                        Id = cadavacacion.id + 1;
+                        dataGridVacaciones.Rows.Add(vacacion.id, vacacion.nombre, vacacion.descripcion, vacacion.empleada, vacacion.fechaDesde.ToShortDateString(), vacacion.fechaHasta.ToShortDateString());
+                        Id = vacacion.id + 1;
                     }
                     habilitarCampos(true);
                 }
                 catch (Exception)
                 {
-                    mostrarError("Falló la conversión desde JSON");
+                    mostrarError("Falló la carga del la base de datos");
                 }
             }
             else
@@ -126,13 +126,13 @@ namespace Vacaciones
         {
             if (dataGridVacaciones.Rows.Count > 1 || (dataGridVacaciones.Rows.Count == 1 && MessageBox.Show("Esta seguro de guardar vacio?", "Cuidado!", MessageBoxButtons.OKCancel) == DialogResult.OK))
             {
-                lista = new List<CadaVacacion>();
+                lista = new List<Vacacion>();
                 //Recorrer toda la grilla, campo por campo, y guardarlo en un JSON.
                 int fila = dataGridVacaciones.Rows.GetFirstRow(DataGridViewElementStates.None);
                 while (fila < dataGridVacaciones.Rows.Count - 1)
                 {
                     var row = dataGridVacaciones.Rows[fila];
-                    CadaVacacion cadavacacion = new CadaVacacion();
+                    Vacacion cadavacacion = new Vacacion();
                     cadavacacion.id = Int32.Parse(row.Cells[0].Value.ToString());
                     cadavacacion.nombre = row.Cells[1].Value.ToString();
                     cadavacacion.descripcion = row.Cells[2].Value.ToString();

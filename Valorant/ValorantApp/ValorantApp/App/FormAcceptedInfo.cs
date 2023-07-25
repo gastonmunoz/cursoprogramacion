@@ -16,10 +16,12 @@ namespace ValorantApp.App
         public string region { get; set; }
         public string rol { get; set; }
         public string dayHour { get; set; }
+
         public FormAcceptedInfo()
         {
             InitializeComponent();
         }
+
         private void FormAcceptedInfo_Load(object sender, EventArgs e) 
         {
             textBoxUser.Text = user;
@@ -27,6 +29,7 @@ namespace ValorantApp.App
             textBoxRol.Text = rol;
             textBoxDayHour.Text = dayHour;
         }
+
         private void buttonClose_Click(object sender, EventArgs e)
         {
             Close();

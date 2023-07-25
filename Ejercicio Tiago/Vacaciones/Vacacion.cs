@@ -1,8 +1,6 @@
-﻿using System.Security.Cryptography.X509Certificates;
-
-namespace Vacaciones
+﻿namespace Vacaciones
 {
-        public class CadaVacacion
+        public class Vacacion
         {
             public int id { get; set; }
             public string nombre { get; set; }
