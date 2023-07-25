@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBoxVacaciones = new System.Windows.Forms.GroupBox();
+            this.buttonExportar = new System.Windows.Forms.Button();
             this.buttonModificar = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.dataGridVacaciones = new System.Windows.Forms.DataGridView();
@@ -45,22 +46,40 @@
             // 
             // groupBoxVacaciones
             // 
+            this.groupBoxVacaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxVacaciones.Controls.Add(this.buttonExportar);
             this.groupBoxVacaciones.Controls.Add(this.buttonModificar);
             this.groupBoxVacaciones.Controls.Add(this.buttonEliminar);
             this.groupBoxVacaciones.Controls.Add(this.dataGridVacaciones);
             this.groupBoxVacaciones.Controls.Add(this.buttonAgregar);
             this.groupBoxVacaciones.Location = new System.Drawing.Point(15, 13);
             this.groupBoxVacaciones.Name = "groupBoxVacaciones";
-            this.groupBoxVacaciones.Size = new System.Drawing.Size(585, 411);
+            this.groupBoxVacaciones.Size = new System.Drawing.Size(656, 441);
             this.groupBoxVacaciones.TabIndex = 0;
             this.groupBoxVacaciones.TabStop = false;
             this.groupBoxVacaciones.Text = "Vacaciones";
             // 
+            // buttonExportar
+            // 
+            this.buttonExportar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonExportar.BackColor = System.Drawing.Color.NavajoWhite;
+            this.buttonExportar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonExportar.Location = new System.Drawing.Point(536, 32);
+            this.buttonExportar.Name = "buttonExportar";
+            this.buttonExportar.Size = new System.Drawing.Size(104, 25);
+            this.buttonExportar.TabIndex = 10;
+            this.buttonExportar.Text = "Exportar";
+            this.buttonExportar.UseVisualStyleBackColor = false;
+            this.buttonExportar.Click += new System.EventHandler(this.buttonExportar_Click);
+            // 
             // buttonModificar
             // 
+            this.buttonModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonModificar.BackColor = System.Drawing.Color.Yellow;
             this.buttonModificar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonModificar.Location = new System.Drawing.Point(96, 364);
+            this.buttonModificar.Location = new System.Drawing.Point(123, 391);
             this.buttonModificar.Name = "buttonModificar";
             this.buttonModificar.Size = new System.Drawing.Size(104, 25);
             this.buttonModificar.TabIndex = 8;
@@ -70,9 +89,10 @@
             // 
             // buttonEliminar
             // 
+            this.buttonEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonEliminar.BackColor = System.Drawing.Color.Yellow;
             this.buttonEliminar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonEliminar.Location = new System.Drawing.Point(364, 364);
+            this.buttonEliminar.Location = new System.Drawing.Point(391, 391);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(104, 25);
             this.buttonEliminar.TabIndex = 7;
@@ -82,6 +102,10 @@
             // 
             // dataGridVacaciones
             // 
+            this.dataGridVacaciones.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridVacaciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridVacaciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridVacaciones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnID,
@@ -94,7 +118,7 @@
             this.dataGridVacaciones.Name = "dataGridVacaciones";
             this.dataGridVacaciones.ReadOnly = true;
             this.dataGridVacaciones.RowTemplate.Height = 25;
-            this.dataGridVacaciones.Size = new System.Drawing.Size(573, 264);
+            this.dataGridVacaciones.Size = new System.Drawing.Size(644, 294);
             this.dataGridVacaciones.TabIndex = 6;
             this.dataGridVacaciones.SelectionChanged += new System.EventHandler(this.dataGridVacaciones_SelectionChanged);
             // 
@@ -103,7 +127,6 @@
             this.ColumnID.HeaderText = "ID";
             this.ColumnID.Name = "ColumnID";
             this.ColumnID.ReadOnly = true;
-            this.ColumnID.Width = 30;
             // 
             // ColumnNombre
             // 
@@ -143,7 +166,7 @@
             this.buttonAgregar.Name = "buttonAgregar";
             this.buttonAgregar.Size = new System.Drawing.Size(107, 25);
             this.buttonAgregar.TabIndex = 5;
-            this.buttonAgregar.Text = "Agregar nueva";
+            this.buttonAgregar.Text = "Agregar";
             this.buttonAgregar.UseVisualStyleBackColor = false;
             this.buttonAgregar.Click += new System.EventHandler(this.buttonAgregar_Click);
             // 
@@ -151,11 +174,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 439);
+            this.ClientSize = new System.Drawing.Size(691, 469);
             this.Controls.Add(this.groupBoxVacaciones);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MinimumSize = new System.Drawing.Size(707, 508);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Planilla de Vacaciones";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBoxVacaciones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVacaciones)).EndInit();
@@ -176,5 +200,6 @@
         private DataGridViewTextBoxColumn ColumnFechaDesde;
         private DataGridViewTextBoxColumn ColumnFechaHasta;
         private Button buttonAgregar;
+        private Button buttonExportar;
     }
 }

@@ -8,7 +8,6 @@ namespace ValorantApp
     public partial class FormPrincipal : Form
     {
         public List<User> users = new List<User>();
-
         public FormPrincipal()
         {
             InitializeComponent();

@@ -46,6 +46,9 @@
             // 
             // groupBoxNuevas
             // 
+            this.groupBoxNuevas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxNuevas.Controls.Add(this.buttonAceptar);
             this.groupBoxNuevas.Controls.Add(this.textBoxNombre);
             this.groupBoxNuevas.Controls.Add(this.buttonCancelar);
@@ -67,6 +70,7 @@
             // 
             // buttonAceptar
             // 
+            this.buttonAceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.buttonAceptar.BackColor = System.Drawing.Color.Yellow;
             this.buttonAceptar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonAceptar.Location = new System.Drawing.Point(6, 360);
@@ -79,6 +83,9 @@
             // 
             // textBoxNombre
             // 
+            this.textBoxNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxNombre.Location = new System.Drawing.Point(6, 59);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(230, 23);
@@ -86,6 +93,7 @@
             // 
             // buttonCancelar
             // 
+            this.buttonCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonCancelar.BackColor = System.Drawing.Color.Yellow;
             this.buttonCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.buttonCancelar.Location = new System.Drawing.Point(133, 360);
@@ -98,6 +106,9 @@
             // 
             // textBoxDescripcion
             // 
+            this.textBoxDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxDescripcion.Location = new System.Drawing.Point(6, 117);
             this.textBoxDescripcion.Name = "textBoxDescripcion";
             this.textBoxDescripcion.Size = new System.Drawing.Size(230, 23);
@@ -105,6 +116,9 @@
             // 
             // labelHasta
             // 
+            this.labelHasta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelHasta.AutoSize = true;
             this.labelHasta.Location = new System.Drawing.Point(6, 284);
             this.labelHasta.Name = "labelHasta";
@@ -114,12 +128,11 @@
             // 
             // comboBoxEmpleadas
             // 
+            this.comboBoxEmpleadas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxEmpleadas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEmpleadas.FormattingEnabled = true;
-            this.comboBoxEmpleadas.Items.AddRange(new object[] {
-            "Pele",
-            "Luis",
-            "Gato"});
             this.comboBoxEmpleadas.Location = new System.Drawing.Point(6, 179);
             this.comboBoxEmpleadas.Name = "comboBoxEmpleadas";
             this.comboBoxEmpleadas.Size = new System.Drawing.Size(229, 23);
@@ -127,6 +140,9 @@
             // 
             // labelDesde
             // 
+            this.labelDesde.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDesde.AutoSize = true;
             this.labelDesde.Location = new System.Drawing.Point(6, 223);
             this.labelDesde.Name = "labelDesde";
@@ -136,6 +152,9 @@
             // 
             // dateTimeDesde
             // 
+            this.dateTimeDesde.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimeDesde.CustomFormat = "dd/MM/YYYY";
             this.dateTimeDesde.Location = new System.Drawing.Point(6, 241);
             this.dateTimeDesde.Name = "dateTimeDesde";
@@ -144,6 +163,9 @@
             // 
             // labelEmpleada
             // 
+            this.labelEmpleada.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelEmpleada.AutoSize = true;
             this.labelEmpleada.Location = new System.Drawing.Point(6, 161);
             this.labelEmpleada.Name = "labelEmpleada";
@@ -153,6 +175,9 @@
             // 
             // dateTimeHasta
             // 
+            this.dateTimeHasta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimeHasta.Location = new System.Drawing.Point(6, 302);
             this.dateTimeHasta.Name = "dateTimeHasta";
             this.dateTimeHasta.Size = new System.Drawing.Size(232, 23);
@@ -160,6 +185,9 @@
             // 
             // labelDescripcion
             // 
+            this.labelDescripcion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDescripcion.AutoSize = true;
             this.labelDescripcion.Location = new System.Drawing.Point(6, 99);
             this.labelDescripcion.Name = "labelDescripcion";
@@ -169,6 +197,9 @@
             // 
             // labelNombre
             // 
+            this.labelNombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.labelNombre.AutoSize = true;
             this.labelNombre.Location = new System.Drawing.Point(8, 41);
             this.labelNombre.Name = "labelNombre";
@@ -182,8 +213,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(272, 440);
             this.Controls.Add(this.groupBoxNuevas);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(500, 479);
+            this.MinimumSize = new System.Drawing.Size(288, 479);
             this.Name = "FormEdicion";
-            this.Text = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Nuevo ingreso";
             this.Load += new System.EventHandler(this.FormEdicion_Load);
             this.groupBoxNuevas.ResumeLayout(false);
             this.groupBoxNuevas.PerformLayout();

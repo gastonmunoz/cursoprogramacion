@@ -12,6 +12,7 @@ namespace Vacaciones
 {
     public partial class FormEdicion : Form
     {
+        private string carpetaActual = Path.GetDirectoryName(Application.ExecutablePath);
         public string nombre { get; set; }
         public string descripcion { get; set; }
         public string empleada { get; set; }
@@ -20,8 +21,8 @@ namespace Vacaciones
         public FormEdicion()
         {
             InitializeComponent();
+            CargarEmpleadas();
         }
-
         private void buttonAceptar_Click(object sender, EventArgs e)
         {
             nombre = textBoxNombre.Text;
@@ -29,7 +30,6 @@ namespace Vacaciones
             empleada = comboBoxEmpleadas.Text;
             fechaDesde = dateTimeDesde.Value;
             fechaHasta = dateTimeHasta.Value;
-
             if (string.IsNullOrWhiteSpace(nombre))
             {
                 mostrarErrorYHacerFoco($"{labelNombre.Text} no puede estar vacio", textBoxNombre);
@@ -56,13 +56,11 @@ namespace Vacaciones
                 Close();
             }
         }
-
         private void buttonCancelar_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.Cancel; 
             Close();    
         }
-
         private void FormEdicion_Load(object sender, EventArgs e)
         {
             textBoxNombre.Text = nombre;
@@ -71,11 +69,20 @@ namespace Vacaciones
             dateTimeDesde.Value = fechaDesde;
             dateTimeHasta.Value = fechaHasta;
         }
-
         private void mostrarErrorYHacerFoco(string mensaje, System.Windows.Forms.Control control) 
         {
-            MessageBox.Show(mensaje);
+            MessageBox.Show(mensaje, "Error");
             control.Focus();
+        }
+        private void CargarEmpleadas()
+        {
+            string nombreArchivoEmpleadas = $"{carpetaActual}\\empleadas.txt";
+            string empleadas = File.ReadAllText(nombreArchivoEmpleadas);
+            string[] renglones = empleadas.Split('\n');
+            foreach (string renglon in renglones)
+            {
+                comboBoxEmpleadas.Items.Add(renglon);
+            }
         }
     }
 }
